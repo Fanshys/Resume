@@ -1,0 +1,23 @@
+@mixin fixedPalette() {
+  // Text
+  --text-fixed-primary: #1C1C1C;
+  --text-fixed-secondary: #1C1C1C;
+  --text-fixed-tertiary: rgba(0, 0, 0, 0.55);
+  --text-fixed-quaternary: rgba(0, 0, 0, 0.37);
+
+  // Fill
+  --fill-fixed-primary: #FFF;
+  --fill-fixed-secondary: rgba(0, 0, 0, 0.05);
+  --fill-fixed-tertiary: rgba(0, 0, 0, 0.55);
+  --fill-fixed-quaternary: rgba(0, 0, 0, 0.37);
+
+  // Stroke
+  --stroke-fixed-primary: rgba(0, 0, 0, 0.11);
+  --stroke-fixed-secondary: rgba(0, 0, 0, 0.08);
+  --stroke-fixed-tertiary: rgba(0, 0, 0, 0.03);
+
+  // Background
+  --background-fixed-primary: #FFF;
+  --background-fixed-secondary: #F3F3F3;
+  --background-fixed-tertiary: #1C1C1C;
+}

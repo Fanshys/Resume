@@ -1,0 +1,22 @@
+@import "normalize.css";
+@import "palette";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-variable-secondary);
+  color: var(--text-variable-primary);
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  min-height: 120vh;
+  overflow-y: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 25px;
+  margin: 0 auto;
+}

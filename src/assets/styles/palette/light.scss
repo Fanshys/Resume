@@ -1,0 +1,24 @@
+@mixin lightTheme() {
+  // Text
+  --text-variable-primary: #1C1C1C;
+  --text-variable-secondary: #1C1C1C;
+  --text-variable-tertiary: rgba(0, 0, 0, 0.55);
+  --text-variable-quaternary: rgba(0, 0, 0, 0.37);
+
+  // Fill
+  --fill-variable-primary: #FFF;
+  --fill-variable-secondary: rgba(0, 0, 0, 0.05);
+  --fill-variable-tertiary: rgba(0, 0, 0, 0.55);
+  --fill-variable-quaternary: #1C1C1C;
+
+  // Stroke
+  --stroke-variable-primary: rgba(0, 0, 0, 0.11);
+  --stroke-variable-secondary: rgba(0, 0, 0, 0.08);
+  --stroke-variable-tertiary: rgba(0, 0, 0, 0.03);
+  --stroke-variable-quaternary: #1C1C1C;
+
+  // Background
+  --background-variable-primary: #FFF;
+  --background-variable-secondary: #F3F3F3;
+  --background-variable-tertiary: #1C1C1C;
+}

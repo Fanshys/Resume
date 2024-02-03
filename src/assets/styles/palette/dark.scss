@@ -1,0 +1,24 @@
+@mixin darkTheme() {
+  // Text
+  --text-variable-primary: #FFF;
+  --text-variable-secondary: rgba(255, 255, 255, 0.91);
+  --text-variable-tertiary: rgba(255, 255, 255, 0.54);
+  --text-variable-quaternary: rgba(255, 255, 255, 0.34);
+
+  // Fill
+  --fill-variable-primary: #353535;
+  --fill-variable-secondary: rgba(255, 255, 255, 0.04);
+  --fill-variable-tertiary: rgba(0, 0, 0, 0.55);
+  --fill-variable-quaternary: #FFF;
+
+  // Stroke
+  --stroke-variable-primary: rgba(255, 255, 255, 0.11);
+  --stroke-variable-secondary: rgba(255, 255, 255, 0.08);
+  --stroke-variable-tertiary: rgba(255, 255, 255, 0.04);
+  --stroke-variable-quaternary: #FFF;
+
+  // Background
+  --background-variable-primary: #1C1C1C;
+  --background-variable-secondary: #252525;
+  --background-variable-tertiary: #FFF;
+}

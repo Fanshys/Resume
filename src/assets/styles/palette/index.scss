@@ -1,0 +1,19 @@
+@import "light";
+@import "dark";
+@import "fixed";
+
+:root {
+  @include fixedPalette();
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include lightTheme();
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include darkTheme();
+  }
+}
