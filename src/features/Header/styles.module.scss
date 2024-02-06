@@ -3,9 +3,10 @@
   top: 0;
   left: 0;
   background-color: var(--background-variable-secondary);
+  z-index: 100;
 
   &-wrap {
-    height: 60px;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -3,6 +3,10 @@
   --animation-duration-slow: 0.3s;
   --hover-opacity: 0.8;
 
+  // height
+  --header-height: 60px;
+  --section-height: calc(100vh - var(--header-height));
+
   // font sizes
   --font-size-small: 1rem;
   --font-size-primary: 1.25rem;

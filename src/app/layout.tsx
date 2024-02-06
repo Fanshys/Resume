@@ -7,7 +7,7 @@ import "@styles/index.scss";
 
 const montserrat = Montserrat({
   subsets: ["cyrillic", "latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 })
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: ComponentWithChildren) {
         <body>
           <Header />
 
-          <main className='container'>
+          <main className="container">
             {children}
           </main>
         </body>
