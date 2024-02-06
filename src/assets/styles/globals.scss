@@ -1,8 +1,9 @@
-@import "normalize.css";
-@import "palette";
-
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -12,11 +13,59 @@ body {
   grid-template-rows: min-content 1fr;
   min-height: 120vh;
   overflow-y: auto;
+
+  &.dark {
+    @include darkTheme();
+  }
+
+  &.light {
+    @include lightTheme();
+  }
 }
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1600px;
   padding: 0 25px;
   margin: 0 auto;
+}
+
+$paddings: 0, 8, 16, 24, 32;
+
+@each $padding in $paddings {
+  .p-#{$padding} {
+    padding: #{$padding}px;
+  }
+
+  .p-y-#{$padding} {
+    padding-top: #{$padding}px;
+    padding-bottom: #{$padding}px;
+  }
+
+  .p-x-#{$padding} {
+    padding-left: #{$padding}px;
+    padding-right: #{$padding}px;
+  }
+
+  .p-t-#{$padding} {
+    padding-top: #{$padding}px;
+  }
+
+  .p-b-#{$padding} {
+    padding-bottom: #{$padding}px;
+  }
+
+  .p-l-#{$padding} {
+    padding-left: #{$padding}px;
+  }
+
+  .p-r-#{$padding} {
+    padding-right: #{$padding}px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  *, *::after, *::before {
+    transition: none !important;
+  }
 }

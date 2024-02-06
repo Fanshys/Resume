@@ -2,10 +2,13 @@
   position: sticky;
   top: 0;
   left: 0;
+  background-color: var(--background-variable-secondary);
 
   &-wrap {
-    height: 48px;
+    height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 24px;
   }
 }

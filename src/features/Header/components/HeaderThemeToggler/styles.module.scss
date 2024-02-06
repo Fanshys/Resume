@@ -1,0 +1,24 @@
+.header-theme-toggler {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  border: 2px solid var(--stroke-variable-primary);
+  border-radius: 24px;
+
+  &-button {
+    padding: 5px 10px;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--text-variable-primary);
+    border-radius: 12px;
+    transition: color var(--animation-duration), background-color var(--animation-duration);
+
+    &.active {
+      background-color: var(--background-variable-tertiary);
+      color: var(--text-variable-quaternary);
+    }
+  }
+}

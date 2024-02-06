@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Projects() {
   return (
     <div className='p-y-24'>
-      Главная
+      Проекты
     </div>
   );
 }
