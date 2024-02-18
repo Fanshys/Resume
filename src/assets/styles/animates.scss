@@ -1,0 +1,9 @@
+.animate-dash {
+  animation: dash var(--animation-duration-drawing) ease-in forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

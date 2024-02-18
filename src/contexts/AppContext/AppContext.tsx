@@ -1,5 +1,7 @@
 'use client';
 
+import { getCookie } from '@helpers/getCookie';
+import { setCookie } from '@helpers/setCookie';
 import type { FC } from 'react';
 import {
   createContext, useEffect, useMemo, useState,
@@ -16,16 +18,16 @@ export const AppContextProvider: FC<AppContextProps> = (props) => {
 
   const setTheme = (newTheme: Theme) => {
     setStateTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
+    setCookie({ name: 'theme', value: newTheme });
   };
 
   const appContextProviderValue = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
   useEffect(() => {
-    const localStorageTheme = localStorage.getItem('theme');
+    const cookieTheme = getCookie('theme');
 
-    if (localStorageTheme) {
-      setStateTheme(localStorageTheme as Theme);
+    if (cookieTheme) {
+      setStateTheme(cookieTheme as Theme);
     }
   }, []);
 

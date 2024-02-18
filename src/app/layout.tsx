@@ -6,6 +6,7 @@ import { Header } from '@features/Header';
 import type { ComponentWithChildren } from '@type';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
+import { cookies } from 'next/headers';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -19,13 +20,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: ComponentWithChildren) {
+  const themeClassName = cookies().get('theme')?.value || '';
+
   return (
     <AppContextProvider>
       <html
         lang="ru"
         className={montserrat.className}
       >
-        <body>
+        <body className={themeClassName}>
           <Header />
 
           <main>

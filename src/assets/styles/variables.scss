@@ -1,6 +1,7 @@
 :root {
   --animation-duration: 0.15s;
   --animation-duration-slow: 0.3s;
+  --animation-duration-drawing: 2s;
   --hover-opacity: 0.8;
 
   // height
@@ -18,7 +19,8 @@
 
 @media (prefers-reduced-motion) {
   :root {
-    --animation-duration: 0;
-    --animation-duration-slow: 0;
+    --animation-duration: 0s;
+    --animation-duration-slow: 0s;
+    --animation-duration-drawing: 0s;
   }
 }
