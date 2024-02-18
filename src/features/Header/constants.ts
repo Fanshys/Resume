@@ -1,16 +1,16 @@
-import { HeaderMenuItem } from "./components/HeaderMenu/types";
+import type { HeaderMenuItem } from './components/HeaderMenu/types';
 
 export const headerMenuItems: HeaderMenuItem[] = [
   {
     url: '/',
-    title: 'Главная'
+    title: 'Главная',
   },
   {
     url: '/projects',
-    title: 'Проекты'
+    title: 'Проекты',
   },
   {
     url: '/contacts',
-    title: 'Контакты'
-  }
-]
+    title: 'Контакты',
+  },
+];

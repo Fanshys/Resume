@@ -1,5 +1,6 @@
-import { ComponentWithChildren } from "@type";
-import { Theme } from "./constants";
+import type { ComponentWithChildren } from '@type';
+
+import type { Theme } from './constants';
 
 export interface AppContextProps extends ComponentWithChildren {}
 

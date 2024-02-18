@@ -15,3 +15,10 @@
   --font-size-h1: 5rem;
   --font-size-big: 7rem;
 }
+
+@media (prefers-reduced-motion) {
+  :root {
+    --animation-duration: 0;
+    --animation-duration-slow: 0;
+  }
+}

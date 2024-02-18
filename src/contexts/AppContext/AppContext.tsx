@@ -1,19 +1,25 @@
-"use client";
-import { createContext, FC, useEffect, useState } from 'react';
-import { AppContextProps } from './types';
-import { appContextInitialState, Theme } from "./constants";
+'use client';
+
+import type { FC } from 'react';
+import {
+  createContext, useEffect, useMemo, useState,
+} from 'react';
+
+import { appContextInitialState, Theme } from './constants';
+import type { AppContextProps } from './types';
 
 export const AppContext = createContext(appContextInitialState);
-
 
 export const AppContextProvider: FC<AppContextProps> = (props) => {
   const { children } = props;
   const [theme, setStateTheme] = useState<Theme>(Theme.Auto);
 
-  const setTheme = (theme: Theme) => {
-    setStateTheme(theme);
-    localStorage.setItem('theme', theme);
+  const setTheme = (newTheme: Theme) => {
+    setStateTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
+
+  const appContextProviderValue = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
   useEffect(() => {
     const localStorageTheme = localStorage.getItem('theme');
@@ -33,7 +39,7 @@ export const AppContextProvider: FC<AppContextProps> = (props) => {
   }, [theme]);
 
   return (
-    <AppContext.Provider value={{ theme, setTheme }}>
+    <AppContext.Provider value={appContextProviderValue}>
       {children}
     </AppContext.Provider>
   );

@@ -1,7 +1,7 @@
-import { getClassListParams } from "./types";
+import type { GetClassListParams } from './types';
 
-export const getClassList = (classNames: getClassListParams): string => {
-  if(!classNames?.length) {
+export const getClassList = (classNames: GetClassListParams): string => {
+  if (!classNames?.length) {
     return '';
   }
 

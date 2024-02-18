@@ -1,18 +1,22 @@
 .about {
   padding: 48px 0;
 
+  &-intro {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
   &-title {
     font-size: var(--font-size-h2);
     line-height: 1.2;
-    margin: 0 0 0 15vw;
+    margin: 0;
     font-weight: 600;
   }
 
   &-description {
     font-size: var(--font-size-primary);
-    margin: 32px 0 0 15vw;
+    margin: 32px 0 0;
     padding: 24px 0;
-    max-width: 960px;
     border-top: 2px solid var(--fill-variable-quaternary);
   }
 

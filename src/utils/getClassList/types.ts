@@ -1,1 +1,1 @@
-export type getClassListParams = (string | boolean | null | undefined)[];
+export type GetClassListParams = (string | boolean | null | undefined)[];

@@ -1,8 +1,9 @@
-import { FC } from 'react';
-import { PictureProps } from './types';
+import { getClassList } from '@utils/getClassList';
+import type { FC } from 'react';
+
+import { getMedia } from './helpers/getMedia';
 import styles from './styles.module.scss';
-import { getClassList } from "@utils/getClassList";
-import { getMedia } from "./helpers/getMedia";
+import type { PictureProps } from './types';
 
 export const Picture: FC<PictureProps> = (props) => {
   const {
@@ -11,7 +12,7 @@ export const Picture: FC<PictureProps> = (props) => {
     alt,
     className,
     imgClassName,
-    sources
+    sources,
   } = props;
 
   if (!src) {
@@ -19,13 +20,13 @@ export const Picture: FC<PictureProps> = (props) => {
   }
 
   const classList = getClassList([
-    styles['picture'],
-    className
+    styles.picture,
+    className,
   ]);
 
   const imgClassList = getClassList([
     styles['picture-image'],
-    imgClassName
+    imgClassName,
   ]);
 
   return (
@@ -35,11 +36,20 @@ export const Picture: FC<PictureProps> = (props) => {
         const srcSet = `${source.src}${source.srcRetina ? `, ${source.srcRetina} 2x` : ''}`;
 
         return (
-          <source key={source.src} srcSet={srcSet} media={media} />
+          <source
+            key={source.src}
+            srcSet={srcSet}
+            media={media}
+          />
         );
       })}
 
-      <img src={src} srcSet={srcRetina ? `${srcRetina} 2x` : ''} alt={alt} className={imgClassList}/>
+      <img
+        src={src}
+        srcSet={srcRetina ? `${srcRetina} 2x` : ''}
+        alt={alt}
+        className={imgClassList}
+      />
     </picture>
   );
 };

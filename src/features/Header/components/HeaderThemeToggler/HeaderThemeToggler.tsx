@@ -1,11 +1,13 @@
-"use client";
+'use client';
 
-import { FC, useContext } from 'react';
+import { AppContext } from '@contexts/AppContext';
+import { Theme } from '@contexts/AppContext/constants';
+import { getClassList } from '@utils/getClassList';
+import type { FC } from 'react';
+import { useContext } from 'react';
+
+import { themeTitles } from './constants';
 import styles from './styles.module.scss';
-import { AppContext } from "@contexts/AppContext";
-import { Theme } from "@contexts/AppContext/constants";
-import { getClassList } from "@utils/getClassList";
-import { themeTitles } from "./constants";
 
 export const HeaderThemeToggler: FC = () => {
   const { theme, setTheme } = useContext(AppContext);
@@ -16,7 +18,7 @@ export const HeaderThemeToggler: FC = () => {
         const isActive = theme === themeItem;
         const classList = getClassList([
           styles['header-theme-toggler-button'],
-          isActive && styles['active']
+          isActive && styles.active,
         ]);
 
         return (
@@ -27,7 +29,7 @@ export const HeaderThemeToggler: FC = () => {
           >
             {themeTitles[themeItem]}
           </button>
-        )
+        );
       })}
     </div>
   );

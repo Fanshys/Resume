@@ -1,4 +1,4 @@
-import { Source } from "@components/Picture/types";
+import type { Source } from '@components/Picture/types';
 
 export const sources: Source[] = [
 

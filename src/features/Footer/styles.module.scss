@@ -1,0 +1,46 @@
+.footer {
+    margin-top: auto;
+    border-top: 2px solid var(--stroke-variable-primary);
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+        padding: 64px 0;
+    }
+
+    &-column {
+
+    }
+
+    &-title {
+        font-size: var(--font-size-h3);
+    }
+
+    &-content {
+        margin-top: 24px;
+    }
+
+    &-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+
+        &-link {
+            color: var(--text-variable-tertiary);
+            font-size: var(--font-size-primary);
+            line-height: 1.2;
+            text-decoration: none;
+            transition: color var(--animation-duration);
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                color: var(--text-variable-primary);
+                border-color: var(--stroke-variable-quaternary);
+            }
+        }
+    }
+}

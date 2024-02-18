@@ -7,11 +7,12 @@ html {
 }
 
 body {
-  background-color: var(--background-variable-secondary);
+  background: var(--background-variable-secondary);
   color: var(--text-variable-primary);
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content 1fr min-content;
   overflow-y: auto;
+  min-height: 100vh;
 
   &.dark {
     @include darkTheme();
@@ -60,11 +61,5 @@ $paddings: 0, 8, 16, 24, 32;
 
   .p-r-#{$padding} {
     padding-right: #{$padding}px;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  *, *::after, *::before {
-    transition: none !important;
   }
 }

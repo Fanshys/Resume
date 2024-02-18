@@ -1,4 +1,4 @@
-import { GetMediaParams } from "./types";
+import type { GetMediaParams } from './types';
 
 export const getMedia = ({ from, to }: GetMediaParams): string => {
   const screenWidthMedias = [];

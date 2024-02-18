@@ -1,15 +1,16 @@
-import { FC } from 'react';
+import { getClassList } from '@utils/getClassList';
+import type { FC } from 'react';
+
+import { HeaderMenu } from './components/HeaderMenu';
+import { HeaderThemeToggler } from './components/HeaderThemeToggler';
+import { headerMenuItems } from './constants';
 import styles from './styles.module.scss';
-import { getClassList } from "@utils/getClassList";
-import { HeaderMenu } from "./components/HeaderMenu";
-import { headerMenuItems } from "./constants";
-import { HeaderThemeToggler } from "./components/HeaderThemeToggler";
 
 export const Header: FC = () => {
   const classList = getClassList([
     styles['header-wrap'],
-    'container'
-  ])
+    'container',
+  ]);
 
   return (
     <header className={styles.header}>

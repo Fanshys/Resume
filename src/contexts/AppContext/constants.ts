@@ -1,4 +1,4 @@
-import { AppContextState } from "./types";
+import type { AppContextState } from './types';
 
 export enum Theme {
   Light = 'light',
@@ -9,4 +9,4 @@ export enum Theme {
 export const appContextInitialState: AppContextState = {
   theme: Theme.Dark,
   setTheme: () => {},
-}
+};

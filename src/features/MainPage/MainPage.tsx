@@ -1,12 +1,11 @@
-import { FC } from 'react';
-import { Intro } from "./components/Intro";
-import { About } from "./components/About";
+import type { FC } from 'react';
 
-export const MainPage: FC = () => {
-  return (
-    <>
-      <Intro />
-      <About />
-    </>
-  );
-};
+import { About } from './components/About';
+import { Intro } from './components/Intro';
+
+export const MainPage: FC = () => (
+  <>
+    <Intro />
+    <About />
+  </>
+);
